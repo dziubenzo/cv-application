@@ -1,0 +1,12 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .app-name {
+  font-family: 'Righteous', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 4px;
+}

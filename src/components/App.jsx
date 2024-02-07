@@ -1,7 +1,15 @@
+import BasicInfo from './BasicInfo';
+import CreatorDetails from './CreatorDetails';
+import Header from './Header';
+
 function App() {
   return (
     <>
-      <div>3, 2, 1... start!</div>
+      <Header />
+      <CreatorDetails />
+      <main>
+        <BasicInfo />
+      </main>
     </>
   );
 }

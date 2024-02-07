@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Basic&family=Righteous&display=swap');
+
+html {
+  --bg-colour: rgb(69, 69, 69);
+  --main-colour: rgb(202, 202, 202);
+}
