@@ -5,5 +5,62 @@ html {
   --main-colour: rgb(202, 202, 202);
   --icon-main-colour: invert(89%) sepia(11%) saturate(0%) hue-rotate(287deg)
     brightness(93%) contrast(85%);
-  --form-outline-colour: grey;
+  --input-outline-colour: grey;
+  --input-focus-colour: rgb(202, 202, 202);
+}
+
+@keyframes show-right {
+  from {
+    display: none;
+    opacity: 0;
+    transform: translateX(600px);
+  }
+
+  to {
+    display: grid;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes show-left {
+  from {
+    display: none;
+    opacity: 0;
+    transform: translateX(-600px);
+  }
+
+  to {
+    display: grid;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hide-left {
+  from {
+    display: grid;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    display: none;
+    opacity: 0;
+    transform: translateX(-600px);
+  }
+}
+
+@keyframes hide-right {
+  from {
+    display: grid;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    display: none;
+    opacity: 0;
+    transform: translateX(600px);
+  }
 }

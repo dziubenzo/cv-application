@@ -1,16 +1,12 @@
-import BasicInfo from './BasicInfo';
 import CreatorDetails from './CreatorDetails';
-import EducationInfo from './EducationInfo';
 import Header from './Header';
+import MainPage from './MainPage';
 
 function App() {
   return (
     <>
       <Header />
-      <main>
-        {/* <BasicInfo /> */}
-        <EducationInfo />
-      </main>
+      <MainPage />
       <CreatorDetails />
     </>
   );

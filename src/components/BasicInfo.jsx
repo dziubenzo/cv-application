@@ -1,8 +1,8 @@
 import '../styles/MainPage.css';
 
-export default function BasicInfo() {
+export default function BasicInfo({ showHide, onNextClick }) {
   return (
-    <div className="basic-info">
+    <div className={'basic-info ' + showHide}>
       <h2 className="basic-info-header">Basic Info</h2>
       <label htmlFor="first-name">First Name:</label>
       <input
@@ -52,9 +52,11 @@ export default function BasicInfo() {
         value={''}
         placeholder="789 654 123"
       />
-      <button type="button">
-        <img src="/next.svg" alt="Go To Next Section" />
-      </button>
+      <div className="navigation-buttons">
+        <button type="button" onClick={onNextClick}>
+          <img src="/next.svg" alt="Go To Education Info Section" />
+        </button>
+      </div>
     </div>
   );
 }

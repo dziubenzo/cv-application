@@ -1,8 +1,8 @@
 import '../styles/MainPage.css';
 
-export default function EducationInfo() {
+export default function EducationInfo({ showHide, onPreviousClick }) {
   return (
-    <div className="education-info" style={{ display: 'grid' }}>
+    <div className={'education-info ' + showHide}>
       <h2 className="education-info-header">Education Info</h2>
       <label htmlFor="institution">Institution:</label>
       <input
@@ -18,7 +18,7 @@ export default function EducationInfo() {
         id="programme"
         name="programme"
         value={''}
-        placeholder="General Wizardry Programme"
+        placeholder="PhD in General Wizardry"
       />
       <label htmlFor="start-date">Start Date:</label>
       <input
@@ -39,8 +39,8 @@ export default function EducationInfo() {
         placeholder="MM/YYYY"
       />
       <div className="navigation-buttons">
-        <button type="button">
-          <img src="/previous.svg" alt="Go To Previous Section" />
+        <button type="button" onClick={onPreviousClick}>
+          <img src="/previous.svg" alt="Go To Basic Info Section" />
         </button>
         <button type="button">
           <img src="/next.svg" alt="Go To Next Section" />

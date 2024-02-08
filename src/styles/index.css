@@ -30,3 +30,7 @@ main {
 img {
   background-color: initial;
 }
+
+*:focus {
+  outline: 3px solid var(--input-focus-colour);
+}

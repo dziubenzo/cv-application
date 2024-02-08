@@ -2,6 +2,29 @@
 .education-info {
   display: grid;
   gap: 16px;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-auto-rows: 35px;
+}
+
+.show-left {
+  animation: show-left 0.5s ease-in forwards;
+}
+
+.show-right {
+  animation: show-right 0.5s ease-in forwards;
+}
+
+.hide-left {
+  animation: hide-left 0.5s ease-in forwards;
+}
+
+.hide-right {
+  animation: hide-right 0.5s ease-in forwards;
+}
+
+.hidden {
+  display: none;
 }
 
 .basic-info-header,
@@ -16,7 +39,7 @@ input {
   font-size: 1.1rem;
   padding: 0.5em;
   border: none;
-  outline: 2px solid var(--form-outline-colour);
+  outline: 2px solid var(--input-outline-colour);
   border-radius: 4px;
   text-align: center;
 }
@@ -37,19 +60,16 @@ input::placeholder {
   text-align: center;
 }
 
-input:focus {
-  outline: 3px solid var(--main-colour);
-}
-
 label,
 button {
-  justify-self: center;
+  place-self: center;
 }
 
 button {
   appearance: none;
   border: none;
   width: 72px;
+  margin-top: 42px;
 }
 
 button img {
@@ -61,5 +81,5 @@ button img {
 .navigation-buttons {
   display: flex;
   justify-content: center;
-  gap: 48px
+  gap: 48px;
 }
