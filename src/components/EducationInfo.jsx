@@ -1,8 +1,9 @@
 import '../styles/MainPage.css';
 
-export default function EducationInfo({ showHide, onPreviousClick }) {
+export default function EducationInfo({ showHide, onPreviousClick, onNextClick }) {
   return (
     <div className={'education-info ' + showHide}>
+      <h2>2 / 4</h2>
       <h2 className="education-info-header">Education Info</h2>
       <label htmlFor="institution">Institution:</label>
       <input
@@ -42,8 +43,8 @@ export default function EducationInfo({ showHide, onPreviousClick }) {
         <button type="button" onClick={onPreviousClick}>
           <img src="/previous.svg" alt="Go To Basic Info Section" />
         </button>
-        <button type="button">
-          <img src="/next.svg" alt="Go To Next Section" />
+        <button type="button" onClick={onNextClick}>
+          <img src="/next.svg" alt="Go To Work Info Section" />
         </button>
       </div>
     </div>

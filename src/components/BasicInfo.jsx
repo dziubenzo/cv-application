@@ -3,6 +3,7 @@ import '../styles/MainPage.css';
 export default function BasicInfo({ showHide, onNextClick }) {
   return (
     <div className={'basic-info ' + showHide}>
+      <h2>1 / 4</h2>
       <h2 className="basic-info-header">Basic Info</h2>
       <label htmlFor="first-name">First Name:</label>
       <input
