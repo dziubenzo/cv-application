@@ -6,10 +6,10 @@ function App() {
   return (
     <>
       <Header />
-      <CreatorDetails />
       <main>
         <BasicInfo />
       </main>
+      <CreatorDetails />
     </>
   );
 }
