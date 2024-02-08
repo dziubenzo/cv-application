@@ -1,4 +1,4 @@
-import '../styles/BasicInfo.css';
+import '../styles/MainPage.css';
 
 export default function BasicInfo() {
   return (

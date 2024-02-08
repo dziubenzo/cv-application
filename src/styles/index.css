@@ -9,6 +9,24 @@
   color: var(--main-colour);
 }
 
+::selection {
+  background-color: var(--main-colour);
+  color: var(--bg-colour);
+}
+
 #root {
   padding: 1em;
+  display: grid;
+  place-items: center;
+  gap: 48px;
+}
+
+main {
+  max-width: 1000px;
+  display: grid;
+  gap: 16px;
+}
+
+img {
+  background-color: initial;
 }

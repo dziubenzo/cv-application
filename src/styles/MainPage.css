@@ -1,9 +1,11 @@
-.basic-info {
+.basic-info,
+.education-info {
   display: grid;
   gap: 16px;
 }
 
-.basic-info-header {
+.basic-info-header,
+.education-info-header {
   font-size: 1.8rem;
   justify-self: center;
 }
@@ -54,4 +56,10 @@ button img {
   filter: var(--icon-main-colour);
   width: 72px;
   cursor: pointer;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 48px
 }

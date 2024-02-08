@@ -1,9 +1,9 @@
-import '../styles/CreatorDetails.css';
+import '../styles/HeaderFooter.css';
 
 export default function CreatorDetails() {
   return (
     <div className="creator-details">
-      <h2>created by <span>dziubenzo</span> </h2>
+      <h2>created by dziubenzo</h2>
       <a
         href="https://github.com/dziubenzo"
         target="_blank"
