@@ -1,5 +1,6 @@
 import BasicInfo from './BasicInfo';
 import CreatorDetails from './CreatorDetails';
+import EducationInfo from './EducationInfo';
 import Header from './Header';
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
     <>
       <Header />
       <main>
-        <BasicInfo />
+        {/* <BasicInfo /> */}
+        <EducationInfo />
       </main>
       <CreatorDetails />
     </>
