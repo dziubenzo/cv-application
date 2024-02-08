@@ -18,7 +18,7 @@ export default function MainPage() {
   }
   function handleHideWork() {
     setShowWork('hide-right');
-    setShowEducation('show-left')
+    setShowEducation('show-left');
   }
   function handleShowWork() {
     setShowEducation('hide-left');

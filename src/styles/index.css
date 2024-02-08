@@ -32,5 +32,5 @@ img {
 }
 
 *:focus {
-  outline: 3px solid var(--input-focus-colour);
+  outline: 3px solid var(--input-focus-colour) !important;
 }

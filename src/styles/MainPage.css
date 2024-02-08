@@ -1,12 +1,18 @@
 .basic-info,
 .education-info,
-.work-info {
+.work-info,
+.extra-work-info {
   display: grid;
   gap: 16px;
+  grid-auto-rows: auto;
+  justify-items: center;
+}
+
+.basic-info,
+.education-info,
+.work-info {
   grid-row-start: 1;
   grid-column-start: 1;
-  grid-auto-rows: 35px;
-  justify-items: center;
 }
 
 .show-left {
@@ -34,7 +40,7 @@ h2 {
 }
 
 input {
-  min-width: 320px;
+  min-width: var(--min-input-width);
   height: 35px;
   font-size: 1.1rem;
   padding: 0.5em;
@@ -61,10 +67,6 @@ input[type='checkbox'] {
   accent-color: var(--main-colour);
 }
 
-input[type='checkbox']:focus {
-  outline: 3px solid var(--input-focus-colour);
-}
-
 input::placeholder {
   color: var(--main-colour);
   opacity: 0.3;
@@ -87,6 +89,21 @@ button img {
   filter: var(--icon-main-colour);
   width: 72px;
   cursor: pointer;
+}
+
+button[class='extra-work-info-button'] {
+  min-width: var(--min-input-width);
+  outline: 3px solid var(--input-outline-colour);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5em;
+  margin: 0;
+}
+
+button[class='extra-work-info-button']:hover {
+  background-color: var(--main-colour);
+  color: var(--bg-colour);
+  outline: 3px solid var(--bg-colour);
 }
 
 .navigation-buttons {

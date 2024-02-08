@@ -7,17 +7,18 @@ html {
     brightness(93%) contrast(85%);
   --input-outline-colour: grey;
   --input-focus-colour: rgb(202, 202, 202);
+  --min-input-width: 320px;
 }
 
 @keyframes show-right {
   from {
-    display: none;
+    visibility: hidden;
     opacity: 0;
     transform: translateX(600px);
   }
 
   to {
-    display: grid;
+    visibility: visible;
     opacity: 1;
     transform: translateX(0);
   }
@@ -25,13 +26,13 @@ html {
 
 @keyframes show-left {
   from {
-    display: none;
+    visibility: hidden;
     opacity: 0;
     transform: translateX(-600px);
   }
 
   to {
-    display: grid;
+    visibility: visible;
     opacity: 1;
     transform: translateX(0);
   }
@@ -39,13 +40,13 @@ html {
 
 @keyframes hide-left {
   from {
-    display: grid;
+    visibility: visible;
     opacity: 1;
     transform: translateX(0);
   }
 
   to {
-    display: none;
+    visibility: hidden;
     opacity: 0;
     transform: translateX(-600px);
   }
@@ -53,13 +54,13 @@ html {
 
 @keyframes hide-right {
   from {
-    display: grid;
+    visibility: visible;
     opacity: 1;
     transform: translateX(0);
   }
 
   to {
-    display: none;
+    visibility: hidden;
     opacity: 0;
     transform: translateX(600px);
   }
