@@ -6,8 +6,8 @@ import WorkInfo from './WorkInfo';
 
 export default function MainPage() {
   const [showBasic, setShowBasic] = useState('');
-  const [showEducation, setShowEducation] = useState('hidden');
-  const [showWork, setShowWork] = useState('hidden');
+  const [showEducation, setShowEducation] = useState('hide');
+  const [showWork, setShowWork] = useState('hide');
   function handleHideEducation() {
     setShowEducation('hide-right');
     setShowBasic('show-left');

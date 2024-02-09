@@ -1,11 +1,17 @@
 import '../styles/MainPage.css';
 import { useState } from 'react';
+import ExtraWorkInfo from './ExtraWorkInfo';
 
 export default function WorkInfo({ showHide, onPreviousClick }) {
-  const [showExtraWorkInfo, setShowExtraWorkInfo] = useState(false);
+  const [showExtraWorkInfo1, setShowExtraWorkInfo1] = useState(false);
+  const [showExtraWorkInfo2, setShowExtraWorkInfo2] = useState(false);
 
-  function handleShowExtraWorkInfo() {
-    setShowExtraWorkInfo(showExtraWorkInfo ? false : true);
+  function handleShowExtraWorkInfo1() {
+    setShowExtraWorkInfo1(showExtraWorkInfo1 ? false : true);
+  }
+
+  function handleShowExtraWorkInfo2() {
+    setShowExtraWorkInfo2(showExtraWorkInfo2 ? false : true);
   }
   return (
     <div className={'work-info ' + showHide}>
@@ -50,47 +56,25 @@ export default function WorkInfo({ showHide, onPreviousClick }) {
       <button
         className="extra-work-info-button"
         type="button"
-        onClick={handleShowExtraWorkInfo}
+        onClick={handleShowExtraWorkInfo1}
       >
-        {showExtraWorkInfo ? 'Hide' : 'Show'} Extra Work Info
+        {showExtraWorkInfo1 ? 'Hide' : 'Show'} Extra Work Info 1
       </button>
-      <div
-        className="extra-work-info"
-        style={showExtraWorkInfo ? { display: 'grid' } : { display: 'none' }}
+      <ExtraWorkInfo counter="1" show={showExtraWorkInfo1} />
+      <button
+        className="extra-work-info-button"
+        type="button"
+        onClick={handleShowExtraWorkInfo2}
       >
-        <h2 className="extra-work-info-header">Extra Work Info</h2>
-        <label htmlFor="company-extra">Company:</label>
-        <input type="text" id="company-extra" name="company-extra" value={''} />
-        <label htmlFor="position-extra">Position:</label>
-        <input
-          type="text"
-          id="position-extra"
-          name="position-extra"
-          value={''}
-        />
-        <label htmlFor="start-date-company-extra">Start Date:</label>
-        <input
-          type="tel"
-          id="start-date-company-extra"
-          name="start-date-company-extra"
-          value={''}
-          pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
-        />
-        <label htmlFor="end-date-company-extra">End Date:</label>
-        <input
-          type="tel"
-          id="end-date-company-extra"
-          name="end-date-company-extra"
-          value={''}
-          pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
-        />
-      </div>
+        {showExtraWorkInfo2 ? 'Hide' : 'Show'} Extra Work Info 2
+      </button>
+      <ExtraWorkInfo counter="2" show={showExtraWorkInfo2} />
       <div className="navigation-buttons">
         <button
           type="button"
           onClick={() => {
             onPreviousClick();
-            setShowExtraWorkInfo(false);
+            setShowExtraWorkInfo1(false);
           }}
         >
           <img src="/previous.svg" alt="Go To Education Info Section" />
