@@ -2,7 +2,7 @@ import '../styles/MainPage.css';
 import { useState } from 'react';
 import ExtraWorkInfo from './ExtraWorkInfo';
 
-export default function WorkInfo({ showHide, onPreviousClick }) {
+export default function WorkInfo({ showHide, onPreviousClick, onNextClick }) {
   const [showExtraWorkInfo1, setShowExtraWorkInfo1] = useState(false);
   const [showExtraWorkInfo2, setShowExtraWorkInfo2] = useState(false);
 
@@ -80,8 +80,15 @@ export default function WorkInfo({ showHide, onPreviousClick }) {
         >
           <img src="/previous.svg" alt="Go To Education Info Section" />
         </button>
-        <button type="button">
-          <img src="/next.svg" alt="Go To Next Section" />
+        <button
+          type="button"
+          onClick={() => {
+            onNextClick();
+            setShowExtraWorkInfo1(false);
+            setShowExtraWorkInfo2(false);
+          }}
+        >
+          <img src="/next.svg" alt="Go To Skills Section" />
         </button>
       </div>
     </div>
