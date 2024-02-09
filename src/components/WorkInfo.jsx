@@ -75,6 +75,7 @@ export default function WorkInfo({ showHide, onPreviousClick }) {
           onClick={() => {
             onPreviousClick();
             setShowExtraWorkInfo1(false);
+            setShowExtraWorkInfo2(false);
           }}
         >
           <img src="/previous.svg" alt="Go To Education Info Section" />

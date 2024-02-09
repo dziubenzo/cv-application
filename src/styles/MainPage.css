@@ -1,7 +1,8 @@
 .basic-info,
 .education-info,
 .work-info,
-div[class*='extra-work-info'] {
+div[class*='extra-work-info'],
+div[class*='extra-education-info'] {
   display: grid;
   gap: 16px;
   grid-auto-rows: auto;
@@ -97,7 +98,8 @@ button img {
   cursor: pointer;
 }
 
-button[class='extra-work-info-button'] {
+button[class='extra-work-info-button'],
+button[class='extra-education-info-button'] {
   min-width: var(--min-input-width);
   outline: 3px solid var(--input-outline-colour);
   font-size: 1.2rem;
@@ -106,7 +108,8 @@ button[class='extra-work-info-button'] {
   margin: 0;
 }
 
-button[class='extra-work-info-button']:hover {
+button[class='extra-work-info-button']:hover,
+button[class='extra-education-info-button']:hover {
   background-color: var(--main-colour);
   color: var(--bg-colour);
   outline: 3px solid var(--bg-colour);
