@@ -32,7 +32,13 @@ div[class*='extra-work-info'] {
 }
 
 .hide {
-  display: none !important;
+  transform-origin: top;
+  animation: hide-top 0.3s ease-in forwards;
+}
+
+.show {
+  transform-origin: top;
+  animation: show-bottom 0.3s ease-in forwards;
 }
 
 h2 {
