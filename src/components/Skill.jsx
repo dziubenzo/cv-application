@@ -24,6 +24,7 @@ export default function Skill({
           <button
             className="delete-skill-button"
             type="button"
+            aria-label={`Delete Skill ${count + 1}`}
             onClick={deleteSkill}
           >
             X

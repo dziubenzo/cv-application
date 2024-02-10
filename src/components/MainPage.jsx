@@ -4,6 +4,7 @@ import { useState } from 'react';
 import '../styles/MainPage.css';
 import WorkInfo from './WorkInfo';
 import SkillsInfo from './SkillsInfo';
+import DefaultCVButton from './DefaultCVButton';
 
 export default function MainPage({ defaultCV }) {
   const [showBasic, setShowBasic] = useState('');
@@ -63,6 +64,10 @@ export default function MainPage({ defaultCV }) {
       [`skill${skills}`]: '',
     });
   }
+  function showDefaultCV() {
+    setInputData(defaultCV);
+    setStillEmployed(true);
+  }
   return (
     <main>
       <BasicInfo
@@ -98,6 +103,7 @@ export default function MainPage({ defaultCV }) {
         updateInputData={handleInputData}
         deleteSkillState={handleDeleteSkill}
       />
+      <DefaultCVButton showDefaultCV={showDefaultCV} />
     </main>
   );
 }

@@ -39,17 +39,17 @@ const defaultCV = {
   // Skills Info
   profile:
     'I love keeping muggles in check with my shiny, little wand! Also, I try my best to stay in touch with Harry, my friend.',
-  skill0: 'Punctual',
+  skill0: 'Can take Crucio with ease',
   skill1: 'Certified wand',
-  skill2: 'Splendid communication skills',
+  skill2: 'Can do Wingardium Leviosa',
 };
 
 function App() {
   return (
     <>
       <Header />
-      <MainPage defaultCV={defaultCV} />
       <CreatorDetails />
+      <MainPage defaultCV={defaultCV} />
     </>
   );
 }

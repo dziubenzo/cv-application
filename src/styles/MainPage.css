@@ -36,8 +36,6 @@ div[class*='extra-education-info'] {
 
 .hide {
   display: none !important;
-  transform-origin: top;
-  animation: hide-top 0.3s ease-in forwards;
 }
 
 .show {
@@ -83,6 +81,7 @@ input[type='checkbox'] {
   min-width: 50px;
   outline: none;
   accent-color: var(--main-colour);
+  cursor: pointer;
 }
 
 input::placeholder,
@@ -90,6 +89,10 @@ textarea::placeholder {
   color: var(--main-colour);
   opacity: 0.3;
   text-align: center;
+}
+
+label {
+  cursor: pointer;
 }
 
 label,
@@ -107,7 +110,6 @@ button {
 button img {
   filter: var(--icon-main-colour);
   width: 72px;
-  cursor: pointer;
 }
 
 button[class='extra-work-info-button'],
@@ -116,7 +118,6 @@ button[class='add-skill-button'] {
   min-width: var(--min-input-width);
   outline: 3px solid var(--input-outline-colour);
   font-size: 1.2rem;
-  cursor: pointer;
   padding: 0.5em;
   margin: 0;
 }
@@ -136,14 +137,18 @@ button[class='delete-skill-button'] {
   width: 24px;
   outline: 3px solid var(--input-outline-colour);
   font-size: 1.2rem;
-  cursor: pointer;
   padding: 0;
   margin: 0;
   border-radius: 48px;
 }
 
+input[disabled] {
+  color: var(--main-colour);
+}
+
 .skill-line {
   display: flex;
+  height: 35px;
   width: var(--min-input-width);
   position: relative;
 }
@@ -152,4 +157,25 @@ button[class='delete-skill-button'] {
   display: flex;
   justify-content: center;
   gap: 48px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button[class='default-cv-button'] {
+  position: absolute;
+  left: -50px;
+  transform: translateX(-100%);
+  width: 80px;
+  margin: 0;
+  padding: 1em;
+  outline: 3px solid var(--input-outline-colour);
+  border-radius: 128px;
+}
+
+button[class='default-cv-button']:hover {
+  background-color: var(--main-colour);
+  color: var(--bg-colour);
+  outline: 3px solid var(--bg-colour);
 }

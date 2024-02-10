@@ -79,17 +79,3 @@ html {
     transform: scaleY(1);
   }
 }
-
-@keyframes hide-top {
-  from {
-    display: grid;
-    opacity: 1;
-    transform: scaleY(1);
-  }
-
-  to {
-    display: none;
-    opacity: 2;
-    transform: scaleY(0);
-  }
-}
