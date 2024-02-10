@@ -23,6 +23,7 @@
 
 main {
   max-width: 1000px;
+  min-height: 80svh;
   display: grid;
   gap: 16px;
 }
@@ -31,6 +32,6 @@ img {
   background-color: initial;
 }
 
-*:focus {
+*:focus-visible {
   outline: 3px solid var(--input-focus-colour) !important;
 }

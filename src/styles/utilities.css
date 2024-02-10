@@ -12,13 +12,13 @@ html {
 
 @keyframes show-right {
   from {
-    visibility: hidden;
+    display: none;
     opacity: 0;
     transform: translateX(600px);
   }
 
   to {
-    visibility: visible;
+    display: grid;
     opacity: 1;
     transform: translateX(0);
   }
@@ -26,13 +26,13 @@ html {
 
 @keyframes show-left {
   from {
-    visibility: hidden;
+    display: none;
     opacity: 0;
     transform: translateX(-600px);
   }
 
   to {
-    visibility: visible;
+    display: grid;
     opacity: 1;
     transform: translateX(0);
   }
@@ -40,13 +40,13 @@ html {
 
 @keyframes hide-left {
   from {
-    visibility: visible;
+    display: grid;
     opacity: 1;
     transform: translateX(0);
   }
 
   to {
-    visibility: hidden;
+    display: none;
     opacity: 0;
     transform: translateX(-600px);
   }
@@ -54,13 +54,13 @@ html {
 
 @keyframes hide-right {
   from {
-    visibility: visible;
+    display: grid;
     opacity: 1;
     transform: translateX(0);
   }
 
   to {
-    visibility: hidden;
+    display: none;
     opacity: 0;
     transform: translateX(600px);
   }
@@ -68,11 +68,13 @@ html {
 
 @keyframes show-bottom {
   from {
+    display: none;
     opacity: 0;
     transform: scaleY(0);
   }
 
   to {
+    display: grid;
     opacity: 1;
     transform: scaleY(1);
   }

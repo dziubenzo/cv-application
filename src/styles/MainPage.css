@@ -1,6 +1,7 @@
 .basic-info,
 .education-info,
 .work-info,
+.skills-info,
 div[class*='extra-work-info'],
 div[class*='extra-education-info'] {
   display: grid;
@@ -11,7 +12,8 @@ div[class*='extra-education-info'] {
 
 .basic-info,
 .education-info,
-.work-info {
+.work-info,
+.skills-info {
   grid-row-start: 1;
   grid-column-start: 1;
 }
@@ -33,6 +35,7 @@ div[class*='extra-education-info'] {
 }
 
 .hide {
+  display: none !important;
   transform-origin: top;
   animation: hide-top 0.3s ease-in forwards;
 }
@@ -46,15 +49,23 @@ h2 {
   font-size: 1.8rem;
 }
 
-input {
+input,
+textarea {
   min-width: var(--min-input-width);
-  height: 35px;
   font-size: 1.1rem;
   padding: 0.5em;
   border: none;
   outline: 2px solid var(--input-outline-colour);
   border-radius: 4px;
   text-align: center;
+}
+
+input {
+  height: 35px;
+}
+
+textarea {
+  resize: vertical;
 }
 
 input::-webkit-outer-spin-button,
@@ -74,7 +85,8 @@ input[type='checkbox'] {
   accent-color: var(--main-colour);
 }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: var(--main-colour);
   opacity: 0.3;
   text-align: center;
@@ -99,7 +111,8 @@ button img {
 }
 
 button[class='extra-work-info-button'],
-button[class='extra-education-info-button'] {
+button[class='extra-education-info-button'],
+button[class='add-skill-button'] {
   min-width: var(--min-input-width);
   outline: 3px solid var(--input-outline-colour);
   font-size: 1.2rem;
@@ -109,10 +122,30 @@ button[class='extra-education-info-button'] {
 }
 
 button[class='extra-work-info-button']:hover,
-button[class='extra-education-info-button']:hover {
+button[class='extra-education-info-button']:hover,
+button[class='add-skill-button']:hover,
+button[class='delete-skill-button']:hover {
   background-color: var(--main-colour);
   color: var(--bg-colour);
   outline: 3px solid var(--bg-colour);
+}
+
+button[class='delete-skill-button'] {
+  position: absolute;
+  right: 4px;
+  width: 24px;
+  outline: 3px solid var(--input-outline-colour);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border-radius: 48px;
+}
+
+.skill-line {
+  display: flex;
+  width: var(--min-input-width);
+  position: relative;
 }
 
 .navigation-buttons {
