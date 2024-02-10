@@ -1,6 +1,6 @@
 import '../styles/MainPage.css';
 
-export default function Skill({ count }) {
+export default function Skill({ count, showDeleteButton, deleteSkill }) {
   const spells = [
     'Alohomora',
     'Avada Kedavra',
@@ -15,14 +15,25 @@ export default function Skill({ count }) {
   ];
   return (
     <>
-      <label htmlFor={`skill${count}`}>Skill {count}</label>
-      <input
-        type="text"
-        id={`skill${count}`}
-        name={`skill${count}`}
-        value={''}
-        placeholder={spells[count - 1]}
-      />
+      <label htmlFor={`skill${count}`}>Skill {count + 1}</label>
+      <div className="skill-line">
+        <input
+          type="text"
+          id={`skill${count}`}
+          name={`skill${count}`}
+          value={''}
+          placeholder={spells[count]}
+        />
+        {showDeleteButton && (
+          <button
+            className="delete-skill-button"
+            type="button"
+            onClick={deleteSkill}
+          >
+            X
+          </button>
+        )}
+      </div>
     </>
   );
 }

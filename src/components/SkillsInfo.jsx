@@ -4,22 +4,36 @@ import Skill from './Skill';
 
 export default function SkillsInfo({ showHide, onPreviousClick }) {
   const [buttonDisabled, setButtonDisabled] = useState(false);
-  const [skillArray, setSkillArray] = useState([]);
-  function handleSkillArray() {
-    if (skillArray.length === 10) {
+  const [skills, setSkills] = useState(3);
+
+  function handleSkills() {
+    if (skills === 10) {
       return;
     }
-    setSkillArray([
-      ...skillArray,
-      <Skill key={skillArray.length + 1} count={skillArray.length + 1} />,
-    ]);
-    setButtonDisabled(skillArray.length === 9 || skillArray.length === 10 ? true : false);
+    setSkills(skills + 1);
+    setButtonDisabled(skills === 9 && true);
   }
-  function renderSkillItems() {
-    return skillArray.map((skill) => {
-      return skill;
-    });
+
+  function renderSkills() {
+    let skillsArray = [];
+    for (let i = 0; i < skills; i++) {
+      skillsArray.push(
+        <Skill
+          key={i}
+          count={i}
+          showDeleteButton={i + 1 === skills ? true : false}
+          deleteSkill={handleSkillDeletion}
+        />,
+      );
+    }
+    return skillsArray;
   }
+
+  function handleSkillDeletion() {
+    setSkills(skills - 1);
+    setButtonDisabled(false);
+  }
+
   return (
     <div className={'skills-info ' + showHide}>
       <h2>4 / 4</h2>
@@ -32,11 +46,11 @@ export default function SkillsInfo({ showHide, onPreviousClick }) {
         value={''}
         placeholder="I love keeping muggles in check with my shiny, little wand! Also, I try my best to stay in touch with Harry, my friend."
       />
-      {renderSkillItems()}
+      {renderSkills()}
       <button
         className="add-skill-button"
         type="button"
-        onClick={handleSkillArray}
+        onClick={handleSkills}
         disabled={buttonDisabled}
       >
         Add Skill
