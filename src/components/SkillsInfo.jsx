@@ -3,6 +3,7 @@ import '../styles/MainPage.css';
 import Skill from './Skill';
 
 export default function SkillsInfo({
+  defaultCV,
   showHide,
   onPreviousClick,
   showInputData,
@@ -26,6 +27,7 @@ export default function SkillsInfo({
       skillsArray.push(
         <Skill
           key={i}
+          defaultCV={defaultCV}
           count={i}
           showDeleteButton={i + 1 === skills ? true : false}
           deleteSkill={handleSkillDeletion}
@@ -54,7 +56,7 @@ export default function SkillsInfo({
         rows={10}
         value={showInputData.profile}
         onChange={updateInputData}
-        placeholder="I love keeping muggles in check with my shiny, little wand! Also, I try my best to stay in touch with Harry, my friend."
+        placeholder={defaultCV.profile}
       />
       {renderSkills()}
       <button

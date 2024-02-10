@@ -3,6 +3,7 @@ import { useState } from 'react';
 import ExtraEducationInfo from './ExtraEducationInfo';
 
 export default function EducationInfo({
+  defaultCV,
   showHide,
   onPreviousClick,
   onNextClick,
@@ -30,7 +31,7 @@ export default function EducationInfo({
         name="institution"
         value={showInputData.institution}
         onChange={updateInputData}
-        placeholder="Hogwarts School of Witchcraft and Wizardry"
+        placeholder={defaultCV.institution}
       />
       <label htmlFor="programme">Programme and Degree:</label>
       <input
@@ -39,7 +40,7 @@ export default function EducationInfo({
         name="programme"
         value={showInputData.programme}
         onChange={updateInputData}
-        placeholder="PhD in General Wizardry"
+        placeholder={defaultCV.programme}
       />
       <label htmlFor="start-date">Start Date:</label>
       <input
@@ -49,7 +50,7 @@ export default function EducationInfo({
         value={showInputData.startDate}
         onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
-        placeholder="MM/YYYY"
+        placeholder={defaultCV.startDate}
       />
       <label htmlFor="end-date">End Date:</label>
       <input
@@ -59,7 +60,7 @@ export default function EducationInfo({
         value={showInputData.endDate}
         onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
-        placeholder="MM/YYYY"
+        placeholder={defaultCV.endDate}
       />
       <button
         className="extra-work-info-button"
@@ -69,6 +70,7 @@ export default function EducationInfo({
         {showExtraEduInfo1 ? 'Hide' : 'Show'} Extra Education Info 1
       </button>
       <ExtraEducationInfo
+        defaultCV={defaultCV}
         counter="1"
         show={showExtraEduInfo1}
         showInputData={showInputData}
@@ -82,6 +84,7 @@ export default function EducationInfo({
         {showExtraEduInfo1 ? 'Hide' : 'Show'} Extra Education Info 2
       </button>
       <ExtraEducationInfo
+        defaultCV={defaultCV}
         counter="2"
         show={showExtraEduInfo2}
         showInputData={showInputData}

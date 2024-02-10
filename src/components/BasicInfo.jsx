@@ -1,6 +1,7 @@
 import '../styles/MainPage.css';
 
 export default function BasicInfo({
+  defaultCV,
   showHide,
   onNextClick,
   showInputData,
@@ -17,7 +18,7 @@ export default function BasicInfo({
         name="firstName"
         value={showInputData.firstName}
         onChange={updateInputData}
-        placeholder="Ron"
+        placeholder={defaultCV.firstName}
       />
       <label htmlFor="last-name">Last Name:</label>
       <input
@@ -26,7 +27,7 @@ export default function BasicInfo({
         name="lastName"
         value={showInputData.lastName}
         onChange={updateInputData}
-        placeholder="Weasley"
+        placeholder={defaultCV.lastName}
       />
       <label htmlFor="city">Town/City:</label>
       <input
@@ -35,7 +36,7 @@ export default function BasicInfo({
         name="city"
         value={showInputData.city}
         onChange={updateInputData}
-        placeholder="London"
+        placeholder={defaultCV.city}
       />
       <label htmlFor="country">Country:</label>
       <input
@@ -44,7 +45,7 @@ export default function BasicInfo({
         name="country"
         value={showInputData.country}
         onChange={updateInputData}
-        placeholder="United Kingdom"
+        placeholder={defaultCV.country}
       />
       <label htmlFor="email">Email Address:</label>
       <input
@@ -53,7 +54,7 @@ export default function BasicInfo({
         name="email"
         value={showInputData.email}
         onChange={updateInputData}
-        placeholder="ron.weasley@hogwarts.edu.uk"
+        placeholder={defaultCV.email}
       />
       <label htmlFor="phone">Phone Number:</label>
       <input
@@ -62,7 +63,7 @@ export default function BasicInfo({
         name="phone"
         value={showInputData.phone}
         onChange={updateInputData}
-        placeholder="789 654 123"
+        placeholder={defaultCV.phone}
       />
       <div className="navigation-buttons">
         <button type="button" onClick={onNextClick}>

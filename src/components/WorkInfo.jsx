@@ -3,6 +3,7 @@ import { useState } from 'react';
 import ExtraWorkInfo from './ExtraWorkInfo';
 
 export default function WorkInfo({
+  defaultCV,
   showHide,
   onPreviousClick,
   onNextClick,
@@ -32,7 +33,7 @@ export default function WorkInfo({
         name="company"
         value={showInputData.company}
         onChange={updateInputData}
-        placeholder="Ministry of Defence Against the Dark Arts"
+        placeholder={defaultCV.company}
       />
       <label htmlFor="position">Position:</label>
       <input
@@ -41,7 +42,7 @@ export default function WorkInfo({
         name="position"
         value={showInputData.position}
         onChange={updateInputData}
-        placeholder="Snacks Conjurer"
+        placeholder={defaultCV.position}
       />
       <label htmlFor="start-date-company">Start Date:</label>
       <input
@@ -51,7 +52,7 @@ export default function WorkInfo({
         value={showInputData.startDateCompany}
         onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
-        placeholder="MM/YYYY"
+        placeholder={defaultCV.startDateCompany}
       />
       <label htmlFor="end-date-company">End Date:</label>
       <input
@@ -61,7 +62,7 @@ export default function WorkInfo({
         value={showInputData.endDateCompany}
         onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
-        placeholder="MM/YYYY"
+        placeholder={defaultCV.endDateCompany}
         disabled={stillEmployed ? true : false}
       />
       <label htmlFor="still-employed">Are you still working there?</label>
@@ -79,6 +80,7 @@ export default function WorkInfo({
         {showExtraWorkInfo1 ? 'Hide' : 'Show'} Extra Work Info 1
       </button>
       <ExtraWorkInfo
+        defaultCV={defaultCV}
         counter="1"
         show={showExtraWorkInfo1}
         showInputData={showInputData}
@@ -92,6 +94,7 @@ export default function WorkInfo({
         {showExtraWorkInfo2 ? 'Hide' : 'Show'} Extra Work Info 2
       </button>
       <ExtraWorkInfo
+        defaultCV={defaultCV}
         counter="2"
         show={showExtraWorkInfo2}
         showInputData={showInputData}

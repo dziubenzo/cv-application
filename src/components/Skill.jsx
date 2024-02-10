@@ -1,24 +1,13 @@
 import '../styles/MainPage.css';
 
 export default function Skill({
+  defaultCV,
   count,
   showDeleteButton,
   deleteSkill,
   showInputData,
   updateInputData,
 }) {
-  const spells = [
-    'Alohomora',
-    'Avada Kedavra',
-    'Cruciatus',
-    'Protego',
-    'Petrificus Totalus',
-    'Reparo',
-    'Wingardium Leviosa',
-    'Petrificus Totalus',
-    'Expelliarmus',
-    'Lumos',
-  ];
   return (
     <>
       <label htmlFor={`skill${count}`}>Skill {count + 1}</label>
@@ -29,7 +18,7 @@ export default function Skill({
           name={`skill${count}`}
           value={showInputData[`skill${count}`]}
           onChange={updateInputData}
-          placeholder={spells[count]}
+          placeholder={defaultCV[`skill${count}`]}
         />
         {showDeleteButton && (
           <button

@@ -5,7 +5,7 @@ import '../styles/MainPage.css';
 import WorkInfo from './WorkInfo';
 import SkillsInfo from './SkillsInfo';
 
-export default function MainPage() {
+export default function MainPage({ defaultCV }) {
   const [showBasic, setShowBasic] = useState('');
   const [showEducation, setShowEducation] = useState('hide');
   const [showWork, setShowWork] = useState('hide');
@@ -66,12 +66,14 @@ export default function MainPage() {
   return (
     <main>
       <BasicInfo
+        defaultCV={defaultCV}
         showHide={showBasic}
         onNextClick={handleShowEducation}
         showInputData={inputData}
         updateInputData={handleInputData}
       />
       <EducationInfo
+        defaultCV={defaultCV}
         showHide={showEducation}
         onPreviousClick={handleHideEducation}
         onNextClick={handleShowWork}
@@ -79,6 +81,7 @@ export default function MainPage() {
         updateInputData={handleInputData}
       />
       <WorkInfo
+        defaultCV={defaultCV}
         showHide={showWork}
         onPreviousClick={handleHideWork}
         onNextClick={handleShowSkills}
@@ -88,6 +91,7 @@ export default function MainPage() {
         updateStillEmployed={handleStillEmployed}
       />
       <SkillsInfo
+        defaultCV={defaultCV}
         showHide={showSkills}
         onPreviousClick={handleHideSkills}
         showInputData={inputData}

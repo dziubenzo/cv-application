@@ -1,6 +1,7 @@
 import '../styles/MainPage.css';
 
 export default function ExtraWorkInfo({
+  defaultCV,
   counter,
   show,
   showInputData,
@@ -24,6 +25,7 @@ export default function ExtraWorkInfo({
         name={`companyExtra${counter}`}
         value={showInputData[`companyExtra${counter}`]}
         onChange={updateInputData}
+        placeholder={defaultCV[`companyExtra${counter}`]}
       />
       <label htmlFor={`position-extra${counter}`}>Position:</label>
       <input
@@ -32,6 +34,7 @@ export default function ExtraWorkInfo({
         name={`positionExtra${counter}`}
         value={showInputData[`positionExtra${counter}`]}
         onChange={updateInputData}
+        placeholder={defaultCV[`positionExtra${counter}`]}
       />
       <label htmlFor={`start-date-company-extra${counter}`}>Start Date:</label>
       <input
@@ -41,6 +44,7 @@ export default function ExtraWorkInfo({
         value={showInputData[`startDateCompanyExtra${counter}`]}
         onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
+        placeholder={defaultCV[`startDateCompanyExtra${counter}`]}
       />
       <label htmlFor={`end-date-company-extra${counter}`}>End Date:</label>
       <input
@@ -50,6 +54,7 @@ export default function ExtraWorkInfo({
         value={showInputData[`endDateCompanyExtra${counter}`]}
         onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
+        placeholder={defaultCV[`endDateCompanyExtra${counter}`]}
       />
     </div>
   );

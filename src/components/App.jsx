@@ -20,7 +20,7 @@ const defaultCV = {
   startDateExtra1: '09/2006',
   endDateExtra1: '06/2010',
   institutionExtra2: 'Yale Wizardry Institution',
-  programmeExtra2: 'MSc in Applied Wand Construction',
+  programmeExtra2: 'MSc in Applied Wand Design',
   startDateExtra2: '01/2006',
   endDateExtra2: '06/2006',
   // Work Info
@@ -48,7 +48,7 @@ function App() {
   return (
     <>
       <Header />
-      <MainPage />
+      <MainPage defaultCV={defaultCV} />
       <CreatorDetails />
     </>
   );
