@@ -2,7 +2,13 @@ import { useState } from 'react';
 import '../styles/MainPage.css';
 import Skill from './Skill';
 
-export default function SkillsInfo({ showHide, onPreviousClick }) {
+export default function SkillsInfo({
+  showHide,
+  onPreviousClick,
+  showInputData,
+  updateInputData,
+  deleteSkillState,
+}) {
   const [buttonDisabled, setButtonDisabled] = useState(false);
   const [skills, setSkills] = useState(3);
 
@@ -23,6 +29,8 @@ export default function SkillsInfo({ showHide, onPreviousClick }) {
           count={i}
           showDeleteButton={i + 1 === skills ? true : false}
           deleteSkill={handleSkillDeletion}
+          showInputData={showInputData}
+          updateInputData={updateInputData}
         />,
       );
     }
@@ -31,6 +39,7 @@ export default function SkillsInfo({ showHide, onPreviousClick }) {
 
   function handleSkillDeletion() {
     setSkills(skills - 1);
+    deleteSkillState(skills - 1);
     setButtonDisabled(false);
   }
 
@@ -42,8 +51,9 @@ export default function SkillsInfo({ showHide, onPreviousClick }) {
       <textarea
         id="profile"
         name="profile"
-        rows={8}
-        value={''}
+        rows={10}
+        value={showInputData.profile}
+        onChange={updateInputData}
         placeholder="I love keeping muggles in check with my shiny, little wand! Also, I try my best to stay in touch with Harry, my friend."
       />
       {renderSkills()}

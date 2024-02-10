@@ -1,6 +1,6 @@
 import '../styles/MainPage.css';
 
-export default function ExtraEducationInfo({ counter, show }) {
+export default function ExtraEducationInfo({ counter, show, showInputData, updateInputData }) {
   return (
     <div
       className={
@@ -16,22 +16,25 @@ export default function ExtraEducationInfo({ counter, show }) {
       <input
         type="text"
         id={`institution-extra${counter}`}
-        name={`institution-extra${counter}`}
-        value={''}
+        name={`institutionExtra${counter}`}
+        value={showInputData[`institutionExtra${counter}`]}
+        onChange={updateInputData}
       />
       <label htmlFor={`programme-extra${counter}`}>Programme and Degree:</label>
       <input
         type="text"
         id={`programme-extra${counter}`}
-        name={`programme-extra${counter}`}
-        value={''}
+        name={`programmeExtra${counter}`}
+        value={showInputData[`programmeExtra${counter}`]}
+        onChange={updateInputData}
       />
       <label htmlFor={`start-date-extra${counter}`}>Start Date:</label>
       <input
         type="tel"
         id={`start-date-extra${counter}`}
-        name={`start-date-extra${counter}`}
-        value={''}
+        name={`startDateExtra${counter}`}
+        value={showInputData[`startDateExtra${counter}`]}
+        onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
         placeholder="MM/YYYY"
       />
@@ -39,8 +42,9 @@ export default function ExtraEducationInfo({ counter, show }) {
       <input
         type="tel"
         id={`end-date-extra${counter}`}
-        name={`end-date-extra${counter}`}
-        value={''}
+        name={`endDateExtra${counter}`}
+        value={showInputData[`endDateExtra${counter}`]}
+        onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
         placeholder="MM/YYYY"
       />

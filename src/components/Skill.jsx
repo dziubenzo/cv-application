@@ -1,6 +1,12 @@
 import '../styles/MainPage.css';
 
-export default function Skill({ count, showDeleteButton, deleteSkill }) {
+export default function Skill({
+  count,
+  showDeleteButton,
+  deleteSkill,
+  showInputData,
+  updateInputData,
+}) {
   const spells = [
     'Alohomora',
     'Avada Kedavra',
@@ -21,7 +27,8 @@ export default function Skill({ count, showDeleteButton, deleteSkill }) {
           type="text"
           id={`skill${count}`}
           name={`skill${count}`}
-          value={''}
+          value={showInputData[`skill${count}`]}
+          onChange={updateInputData}
           placeholder={spells[count]}
         />
         {showDeleteButton && (

@@ -1,6 +1,11 @@
 import '../styles/MainPage.css';
 
-export default function ExtraWorkInfo({ counter, show }) {
+export default function ExtraWorkInfo({
+  counter,
+  show,
+  showInputData,
+  updateInputData,
+}) {
   return (
     <div
       className={
@@ -16,30 +21,34 @@ export default function ExtraWorkInfo({ counter, show }) {
       <input
         type="text"
         id={`company-extra${counter}`}
-        name={`company-extra${counter}`}
-        value={''}
+        name={`companyExtra${counter}`}
+        value={showInputData[`companyExtra${counter}`]}
+        onChange={updateInputData}
       />
       <label htmlFor={`position-extra${counter}`}>Position:</label>
       <input
         type="text"
         id={`position-extra${counter}`}
-        name={`position-extra${counter}`}
-        value={''}
+        name={`positionExtra${counter}`}
+        value={showInputData[`positionExtra${counter}`]}
+        onChange={updateInputData}
       />
       <label htmlFor={`start-date-company-extra${counter}`}>Start Date:</label>
       <input
         type="tel"
         id={`start-date-company-extra${counter}`}
-        name={`start-date-company-extra${counter}`}
-        value={''}
+        name={`startDateCompanyExtra${counter}`}
+        value={showInputData[`startDateCompanyExtra${counter}`]}
+        onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
       />
       <label htmlFor={`end-date-company-extra${counter}`}>End Date:</label>
       <input
         type="tel"
         id={`end-date-company-extra${counter}`}
-        name={`end-date-company-extra${counter}`}
-        value={''}
+        name={`endDateCompanyExtra${counter}`}
+        value={showInputData[`endDateCompanyExtra${counter}`]}
+        onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
       />
     </div>

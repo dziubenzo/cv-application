@@ -6,6 +6,8 @@ export default function EducationInfo({
   showHide,
   onPreviousClick,
   onNextClick,
+  showInputData,
+  updateInputData,
 }) {
   const [showExtraEduInfo1, setShowExtraEduInfo1] = useState(false);
   const [showExtraEduInfo2, setShowExtraEduInfo2] = useState(false);
@@ -26,7 +28,8 @@ export default function EducationInfo({
         type="text"
         id="institution"
         name="institution"
-        value={''}
+        value={showInputData.institution}
+        onChange={updateInputData}
         placeholder="Hogwarts School of Witchcraft and Wizardry"
       />
       <label htmlFor="programme">Programme and Degree:</label>
@@ -34,15 +37,17 @@ export default function EducationInfo({
         type="text"
         id="programme"
         name="programme"
-        value={''}
+        value={showInputData.programme}
+        onChange={updateInputData}
         placeholder="PhD in General Wizardry"
       />
       <label htmlFor="start-date">Start Date:</label>
       <input
         type="tel"
         id="start-date"
-        name="start-date"
-        value={''}
+        name="startDate"
+        value={showInputData.startDate}
+        onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
         placeholder="MM/YYYY"
       />
@@ -50,8 +55,9 @@ export default function EducationInfo({
       <input
         type="tel"
         id="end-date"
-        name="end-date"
-        value={''}
+        name="endDate"
+        value={showInputData.endDate}
+        onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
         placeholder="MM/YYYY"
       />
@@ -62,7 +68,12 @@ export default function EducationInfo({
       >
         {showExtraEduInfo1 ? 'Hide' : 'Show'} Extra Education Info 1
       </button>
-      <ExtraEducationInfo counter="1" show={showExtraEduInfo1} />
+      <ExtraEducationInfo
+        counter="1"
+        show={showExtraEduInfo1}
+        showInputData={showInputData}
+        updateInputData={updateInputData}
+      />
       <button
         className="extra-work-info-button"
         type="button"
@@ -70,7 +81,12 @@ export default function EducationInfo({
       >
         {showExtraEduInfo1 ? 'Hide' : 'Show'} Extra Education Info 2
       </button>
-      <ExtraEducationInfo counter="2" show={showExtraEduInfo2} />
+      <ExtraEducationInfo
+        counter="2"
+        show={showExtraEduInfo2}
+        showInputData={showInputData}
+        updateInputData={updateInputData}
+      />
       <div className="navigation-buttons">
         <button
           type="button"

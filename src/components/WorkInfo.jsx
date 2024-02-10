@@ -2,7 +2,15 @@ import '../styles/MainPage.css';
 import { useState } from 'react';
 import ExtraWorkInfo from './ExtraWorkInfo';
 
-export default function WorkInfo({ showHide, onPreviousClick, onNextClick }) {
+export default function WorkInfo({
+  showHide,
+  onPreviousClick,
+  onNextClick,
+  showInputData,
+  updateInputData,
+  stillEmployed,
+  updateStillEmployed,
+}) {
   const [showExtraWorkInfo1, setShowExtraWorkInfo1] = useState(false);
   const [showExtraWorkInfo2, setShowExtraWorkInfo2] = useState(false);
 
@@ -22,7 +30,8 @@ export default function WorkInfo({ showHide, onPreviousClick, onNextClick }) {
         type="text"
         id="company"
         name="company"
-        value={''}
+        value={showInputData.company}
+        onChange={updateInputData}
         placeholder="Ministry of Defence Against the Dark Arts"
       />
       <label htmlFor="position">Position:</label>
@@ -30,15 +39,17 @@ export default function WorkInfo({ showHide, onPreviousClick, onNextClick }) {
         type="text"
         id="position"
         name="position"
-        value={''}
+        value={showInputData.position}
+        onChange={updateInputData}
         placeholder="Snacks Conjurer"
       />
       <label htmlFor="start-date-company">Start Date:</label>
       <input
         type="tel"
         id="start-date-company"
-        name="start-date-company"
-        value={''}
+        name="startDateCompany"
+        value={showInputData.startDateCompany}
+        onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
         placeholder="MM/YYYY"
       />
@@ -46,13 +57,20 @@ export default function WorkInfo({ showHide, onPreviousClick, onNextClick }) {
       <input
         type="tel"
         id="end-date-company"
-        name="end-date-company"
-        value={''}
+        name="endDateCompany"
+        value={showInputData.endDateCompany}
+        onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
         placeholder="MM/YYYY"
+        disabled={stillEmployed ? true : false}
       />
       <label htmlFor="still-employed">Are you still working there?</label>
-      <input type="checkbox" id="still-employed" checked={''} />
+      <input
+        type="checkbox"
+        id="still-employed"
+        checked={stillEmployed}
+        onChange={updateStillEmployed}
+      />
       <button
         className="extra-work-info-button"
         type="button"
@@ -60,7 +78,12 @@ export default function WorkInfo({ showHide, onPreviousClick, onNextClick }) {
       >
         {showExtraWorkInfo1 ? 'Hide' : 'Show'} Extra Work Info 1
       </button>
-      <ExtraWorkInfo counter="1" show={showExtraWorkInfo1} />
+      <ExtraWorkInfo
+        counter="1"
+        show={showExtraWorkInfo1}
+        showInputData={showInputData}
+        updateInputData={updateInputData}
+      />
       <button
         className="extra-work-info-button"
         type="button"
@@ -68,7 +91,12 @@ export default function WorkInfo({ showHide, onPreviousClick, onNextClick }) {
       >
         {showExtraWorkInfo2 ? 'Hide' : 'Show'} Extra Work Info 2
       </button>
-      <ExtraWorkInfo counter="2" show={showExtraWorkInfo2} />
+      <ExtraWorkInfo
+        counter="2"
+        show={showExtraWorkInfo2}
+        showInputData={showInputData}
+        updateInputData={updateInputData}
+      />
       <div className="navigation-buttons">
         <button
           type="button"

@@ -1,6 +1,11 @@
 import '../styles/MainPage.css';
 
-export default function BasicInfo({ showHide, onNextClick }) {
+export default function BasicInfo({
+  showHide,
+  onNextClick,
+  showInputData,
+  updateInputData,
+}) {
   return (
     <div className={'basic-info ' + showHide}>
       <h2>1 / 4</h2>
@@ -9,16 +14,18 @@ export default function BasicInfo({ showHide, onNextClick }) {
       <input
         type="text"
         id="first-name"
-        name="first-name"
-        value={''}
+        name="firstName"
+        value={showInputData.firstName}
+        onChange={updateInputData}
         placeholder="Ron"
       />
       <label htmlFor="last-name">Last Name:</label>
       <input
         type="text"
         id="last-name"
-        name="last-name"
-        value={''}
+        name="lastName"
+        value={showInputData.lastName}
+        onChange={updateInputData}
         placeholder="Weasley"
       />
       <label htmlFor="city">Town/City:</label>
@@ -26,7 +33,8 @@ export default function BasicInfo({ showHide, onNextClick }) {
         type="text"
         id="city"
         name="city"
-        value={''}
+        value={showInputData.city}
+        onChange={updateInputData}
         placeholder="London"
       />
       <label htmlFor="country">Country:</label>
@@ -34,7 +42,8 @@ export default function BasicInfo({ showHide, onNextClick }) {
         type="text"
         id="country"
         name="country"
-        value={''}
+        value={showInputData.country}
+        onChange={updateInputData}
         placeholder="United Kingdom"
       />
       <label htmlFor="email">Email Address:</label>
@@ -42,7 +51,8 @@ export default function BasicInfo({ showHide, onNextClick }) {
         type="email"
         id="email"
         name="email"
-        value={''}
+        value={showInputData.email}
+        onChange={updateInputData}
         placeholder="ron.weasley@hogwarts.edu.uk"
       />
       <label htmlFor="phone">Phone Number:</label>
@@ -50,7 +60,8 @@ export default function BasicInfo({ showHide, onNextClick }) {
         type="number"
         id="phone"
         name="phone"
-        value={''}
+        value={showInputData.phone}
+        onChange={updateInputData}
         placeholder="789 654 123"
       />
       <div className="navigation-buttons">
