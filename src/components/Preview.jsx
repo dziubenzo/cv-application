@@ -1,4 +1,6 @@
-export default function Preview({ showPreview, data }) {
+import PreviewButton from './PreviewButton';
+
+export default function Preview({ handleShowPreview, showPreview, data }) {
   return (
     <div
       className="preview"
@@ -155,6 +157,10 @@ export default function Preview({ showPreview, data }) {
           )}
         </ul>
       </div>
+      <PreviewButton
+        showPreview={showPreview}
+        handleShowPreview={handleShowPreview}
+      />
     </div>
   );
 }

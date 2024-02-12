@@ -164,7 +164,7 @@ button {
 }
 
 button[class='default-cv-button'],
-button[class='show-preview-button'] {
+button[class='preview-button'] {
   position: absolute;
   width: 80px;
   margin: 0;
@@ -178,13 +178,13 @@ button[class='default-cv-button'] {
   transform: translateX(-100%);
 }
 
-button[class='show-preview-button'] {
+button[class='preview-button'] {
   right: -50px;
   transform: translateX(100%);
 }
 
 button[class='default-cv-button']:hover,
-button[class='show-preview-button']:hover {
+button[class='preview-button']:hover {
   background-color: var(--main-colour);
   color: var(--bg-colour);
   outline: 3px solid var(--bg-colour);

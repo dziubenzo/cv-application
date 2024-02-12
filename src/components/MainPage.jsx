@@ -5,7 +5,7 @@ import '../styles/MainPage.css';
 import WorkInfo from './WorkInfo';
 import SkillsInfo from './SkillsInfo';
 import DefaultCVButton from './DefaultCVButton';
-import ShowPreviewButton from './ShowPreviewButton';
+import PreviewButton from './PreviewButton';
 import Preview from './Preview';
 
 export default function MainPage({ defaultCV }) {
@@ -111,9 +111,16 @@ export default function MainPage({ defaultCV }) {
           deleteSkillState={handleDeleteSkill}
         />
         <DefaultCVButton showDefaultCV={showDefaultCV} />
-        <ShowPreviewButton showPreview={handleShowPreview} />
+        <PreviewButton
+          showPreview={showPreview}
+          handleShowPreview={handleShowPreview}
+        />
       </main>
-      <Preview showPreview={showPreview} data={inputData} />
+      <Preview
+        handleShowPreview={handleShowPreview}
+        showPreview={showPreview}
+        data={inputData}
+      />
     </>
   );
 }
