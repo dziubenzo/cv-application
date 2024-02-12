@@ -75,43 +75,45 @@ export default function MainPage({ defaultCV }) {
     setShowPreview(showPreview ? false : true);
   }
   return (
-    <main>
-      <BasicInfo
-        defaultCV={defaultCV}
-        showHide={showBasic}
-        onNextClick={handleShowEducation}
-        showInputData={inputData}
-        updateInputData={handleInputData}
-      />
-      <EducationInfo
-        defaultCV={defaultCV}
-        showHide={showEducation}
-        onPreviousClick={handleHideEducation}
-        onNextClick={handleShowWork}
-        showInputData={inputData}
-        updateInputData={handleInputData}
-      />
-      <WorkInfo
-        defaultCV={defaultCV}
-        showHide={showWork}
-        onPreviousClick={handleHideWork}
-        onNextClick={handleShowSkills}
-        showInputData={inputData}
-        updateInputData={handleInputData}
-        stillEmployed={stillEmployed}
-        updateStillEmployed={handleStillEmployed}
-      />
-      <SkillsInfo
-        defaultCV={defaultCV}
-        showHide={showSkills}
-        onPreviousClick={handleHideSkills}
-        showInputData={inputData}
-        updateInputData={handleInputData}
-        deleteSkillState={handleDeleteSkill}
-      />
-      <DefaultCVButton showDefaultCV={showDefaultCV} />
-      <ShowPreviewButton showPreview={handleShowPreview} />
-      <Preview showPreview={showPreview} />
-    </main>
+    <>
+      <main>
+        <BasicInfo
+          defaultCV={defaultCV}
+          showHide={showBasic}
+          onNextClick={handleShowEducation}
+          showInputData={inputData}
+          updateInputData={handleInputData}
+        />
+        <EducationInfo
+          defaultCV={defaultCV}
+          showHide={showEducation}
+          onPreviousClick={handleHideEducation}
+          onNextClick={handleShowWork}
+          showInputData={inputData}
+          updateInputData={handleInputData}
+        />
+        <WorkInfo
+          defaultCV={defaultCV}
+          showHide={showWork}
+          onPreviousClick={handleHideWork}
+          onNextClick={handleShowSkills}
+          showInputData={inputData}
+          updateInputData={handleInputData}
+          stillEmployed={stillEmployed}
+          updateStillEmployed={handleStillEmployed}
+        />
+        <SkillsInfo
+          defaultCV={defaultCV}
+          showHide={showSkills}
+          onPreviousClick={handleHideSkills}
+          showInputData={inputData}
+          updateInputData={handleInputData}
+          deleteSkillState={handleDeleteSkill}
+        />
+        <DefaultCVButton showDefaultCV={showDefaultCV} />
+        <ShowPreviewButton showPreview={handleShowPreview} />
+      </main>
+      <Preview showPreview={showPreview} data={inputData} />
+    </>
   );
 }
