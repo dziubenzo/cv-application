@@ -5,6 +5,7 @@ import '../styles/MainPage.css';
 import WorkInfo from './WorkInfo';
 import SkillsInfo from './SkillsInfo';
 import DefaultCVButton from './DefaultCVButton';
+import ShowPreviewButton from './ShowPreviewButton';
 
 export default function MainPage({ defaultCV }) {
   const [showBasic, setShowBasic] = useState('');
@@ -104,6 +105,7 @@ export default function MainPage({ defaultCV }) {
         deleteSkillState={handleDeleteSkill}
       />
       <DefaultCVButton showDefaultCV={showDefaultCV} />
+      <ShowPreviewButton />
     </main>
   );
 }

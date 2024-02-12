@@ -163,10 +163,9 @@ button {
   cursor: pointer;
 }
 
-button[class='default-cv-button'] {
+button[class='default-cv-button'],
+button[class='show-preview-button'] {
   position: absolute;
-  left: -50px;
-  transform: translateX(-100%);
   width: 80px;
   margin: 0;
   padding: 1em;
@@ -174,7 +173,18 @@ button[class='default-cv-button'] {
   border-radius: 128px;
 }
 
-button[class='default-cv-button']:hover {
+button[class='default-cv-button'] {
+  left: -50px;
+  transform: translateX(-100%);
+}
+
+button[class='show-preview-button'] {
+  right: -50px;
+  transform: translateX(100%);
+}
+
+button[class='default-cv-button']:hover,
+button[class='show-preview-button']:hover {
   background-color: var(--main-colour);
   color: var(--bg-colour);
   outline: 3px solid var(--bg-colour);
