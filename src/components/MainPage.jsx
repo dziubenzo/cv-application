@@ -6,6 +6,7 @@ import WorkInfo from './WorkInfo';
 import SkillsInfo from './SkillsInfo';
 import DefaultCVButton from './DefaultCVButton';
 import ShowPreviewButton from './ShowPreviewButton';
+import Preview from './Preview';
 
 export default function MainPage({ defaultCV }) {
   const [showBasic, setShowBasic] = useState('');
@@ -14,6 +15,7 @@ export default function MainPage({ defaultCV }) {
   const [showSkills, setShowSkills] = useState('hide');
   const [inputData, setInputData] = useState({});
   const [stillEmployed, setStillEmployed] = useState(false);
+  const [showPreview, setShowPreview] = useState(false);
 
   function handleHideEducation() {
     setShowEducation('hide-right');
@@ -69,6 +71,9 @@ export default function MainPage({ defaultCV }) {
     setInputData(defaultCV);
     setStillEmployed(true);
   }
+  function handleShowPreview() {
+    setShowPreview(showPreview ? false : true);
+  }
   return (
     <main>
       <BasicInfo
@@ -105,7 +110,8 @@ export default function MainPage({ defaultCV }) {
         deleteSkillState={handleDeleteSkill}
       />
       <DefaultCVButton showDefaultCV={showDefaultCV} />
-      <ShowPreviewButton />
+      <ShowPreviewButton showPreview={handleShowPreview} />
+      <Preview showPreview={showPreview} />
     </main>
   );
 }
