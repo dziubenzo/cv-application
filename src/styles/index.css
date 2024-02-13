@@ -170,6 +170,12 @@ Mobile
     right: -4px;
     transform: scale(0.85) rotate(5deg);
   }
+
+  .creator-details img {
+    height: 24px;
+    transition: none;
+    animation: rotate infinite linear 3s alternate;
+  }
 }
 
 /*
