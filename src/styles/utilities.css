@@ -9,6 +9,7 @@ html {
   --input-focus-colour: rgb(202, 202, 202);
   --min-input-width: 320px;
   --preview-border: 3px solid grey;
+  --preview-header-bg-colour: rgb(232, 232, 232);
 }
 
 @keyframes show-right {

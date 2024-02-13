@@ -16,8 +16,10 @@ export default function Preview({ handleShowPreview, showPreview, data }) {
         </h2>
       </div>
       <div className="contact">
+        <img src="./email.svg" alt="Email Icon" />
         <p className="email">{data.email}</p>
         <hr />
+        <img src="./phone.svg" alt="Phone Icon" />
         <p className="phone">{data.phone}</p>
       </div>
       <div className="education-and-work">

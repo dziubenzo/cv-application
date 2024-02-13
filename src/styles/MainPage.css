@@ -208,7 +208,7 @@ Preview
   background-color: white;
   height: 90svh;
   aspect-ratio: 3 / 4;
-  padding: 0.5em;
+  padding: 4em;
 }
 
 .preview .top {
@@ -277,22 +277,34 @@ hr {
   font-size: 0.9rem;
 }
 
+.preview p[class*='dates'] {
+  font-size: 0.8rem;
+}
+
 .institution,
 .company,
 .programme,
 .position {
   padding: 0.5em 0;
+  width: 32ch;
 }
 
 .preview h2[class*='header'] {
   font-size: 2.2rem;
   font-variant: small-caps;
   letter-spacing: 2px;
+  background-color: var(--preview-header-bg-colour);
+  border-radius: 12px;
 }
 
 .profile-header,
 .skills-header {
   text-align: center;
+}
+
+.education-header,
+.work-header {
+  padding-left: 0.25em;
 }
 
 .skills-list {
@@ -303,4 +315,13 @@ hr {
 .profile,
 .skills-list li {
   font-size: 0.9rem;
+}
+
+.preview button {
+  outline: 3px solid var(--bg-colour);
+  right: -25px;
+}
+
+.preview img {
+  width: 32px;
 }

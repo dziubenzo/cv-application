@@ -46,7 +46,7 @@ Queries
 Desktop, but lower height
 */
 
-@media screen and (height <= 900px) {
+@media screen and (height <= 950px) {
   .preview h3 {
     font-size: 0.8rem;
   }
@@ -65,7 +65,7 @@ Desktop, but lower height
   }
 }
 
-@media screen and (height <= 800px) {
+@media screen and (height <= 880px) {
   .preview h3 {
     font-size: 0.7rem;
   }
@@ -80,7 +80,11 @@ Desktop, but lower height
 
   .preview p,
   .preview li {
-    font-size: 0.7rem;
+    font-size: 0.6rem !important;
+  }
+
+  .preview img {
+    width: 24px;
   }
 }
 
@@ -131,6 +135,7 @@ Mobile
 
   .preview {
     height: auto !important;
+    padding: 0;
   }
 
   .preview button {
@@ -157,6 +162,10 @@ Mobile
 
   .preview p[class*='dates'] {
     font-size: 0.55rem;
+  }
+
+  .preview img {
+    width: 24px;
   }
 
   header .app-name {
