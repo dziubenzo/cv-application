@@ -190,6 +190,10 @@ button[class='preview-button']:hover {
   outline: 3px solid var(--bg-colour);
 }
 
+/* 
+Preview
+*/
+
 .preview * {
   background-color: white;
   color: black;
@@ -197,9 +201,7 @@ button[class='preview-button']:hover {
 
 .preview {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform-origin: center;
   display: grid;
   grid-template-columns: 4fr 1fr;
   grid-template-rows: 1fr 5fr;
@@ -210,6 +212,7 @@ button[class='preview-button']:hover {
 }
 
 .preview .top {
+  text-align: center;
   border-bottom: var(--preview-border);
 }
 
@@ -281,11 +284,8 @@ hr {
   padding: 0.5em 0;
 }
 
-.education-header,
-.work-header,
-.profile-header,
-.skills-header {
-  font-size: 2.5rem;
+.preview h2[class*='header'] {
+  font-size: 2.2rem;
   font-variant: small-caps;
   letter-spacing: 2px;
 }
@@ -298,4 +298,9 @@ hr {
 .skills-list {
   list-style-type: circle;
   list-style-position: inside;
+}
+
+.profile,
+.skills-list li {
+  font-size: 0.9rem;
 }

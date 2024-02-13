@@ -36,3 +36,148 @@ img {
 *:focus-visible {
   outline: 3px solid var(--input-focus-colour) !important;
 }
+
+/* 
+Media
+Queries
+ */
+
+/* 
+Desktop, but lower height
+*/
+
+@media screen and (height <= 900px) {
+  .preview h3 {
+    font-size: 0.8rem;
+  }
+
+  .preview h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .preview h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .preview p,
+  .preview li {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (height <= 800px) {
+  .preview h3 {
+    font-size: 0.7rem;
+  }
+
+  .preview h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .preview h1 {
+    font-size: 1.6rem !important;
+  }
+
+  .preview p,
+  .preview li {
+    font-size: 0.7rem;
+  }
+}
+
+/* 
+Mobile
+*/
+
+@media screen and (width <= 600px) {
+  #root {
+    gap: 16px;
+    padding: 0;
+  }
+
+  button[class='default-cv-button'],
+  button[class='preview-button'] {
+    position: absolute;
+    width: 80px;
+    transform: initial !important;
+    bottom: 4px !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0;
+    padding: 1em;
+    outline: 3px solid var(--input-outline-colour);
+    border-radius: 128px;
+  }
+
+  button[class='default-cv-button'] {
+    left: 12px !important;
+    right: initial !important;
+  }
+
+  button[class='preview-button'] {
+    left: initial !important;
+    right: 12px !important;
+  }
+
+  button[class='default-cv-button']:hover,
+  button[class='preview-button']:hover {
+    background-color: var(--main-colour);
+    color: var(--bg-colour);
+    outline: 3px solid var(--bg-colour);
+  }
+
+  .navigation-buttons {
+    gap: 0px;
+  }
+
+  .preview {
+    height: auto !important;
+  }
+
+  .preview button {
+    bottom: 12px !important;
+    right: 12px !important;
+  }
+
+  .preview h3 {
+    font-size: 0.5rem !important;
+  }
+
+  .preview h2 {
+    font-size: 1rem !important;
+  }
+
+  .preview h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .preview p,
+  .preview li {
+    font-size: 0.6rem;
+  }
+
+  .preview p[class*='dates'] {
+    font-size: 0.55rem;
+  }
+
+  header .app-name {
+    font-size: calc(1rem + 11vw);
+  }
+
+  .creator-details {
+    top: 16px;
+    right: -4px;
+    transform: scale(0.85) rotate(5deg);
+  }
+}
+
+/*
+Tablet
+*/
+
+@media screen and (width > 600px) and (width <= 1000px) {
+  .preview button {
+    transform: initial;
+    right: 16px;
+    bottom: 16px;
+  }
+}
