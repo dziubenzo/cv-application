@@ -15,30 +15,37 @@ export default function MainPage({ defaultCV }) {
   const [inputData, setInputData] = useState({});
   const [stillEmployed, setStillEmployed] = useState(false);
   const [showPreview, setShowPreview] = useState(false);
+  const [hideButtons, setHideButtons] = useState(false);
 
   function handleHideEducation() {
     setShowEducation('hide-right');
     setShowBasic('show-left');
+    handleHideButtons();
   }
   function handleShowEducation() {
     setShowBasic('hide-left');
     setShowEducation('show-right');
+    handleHideButtons();
   }
   function handleHideWork() {
     setShowWork('hide-right');
     setShowEducation('show-left');
+    handleHideButtons();
   }
   function handleShowWork() {
     setShowEducation('hide-left');
     setShowWork('show-right');
+    handleHideButtons();
   }
   function handleHideSkills() {
     setShowSkills('hide-right');
     setShowWork('show-left');
+    handleHideButtons();
   }
   function handleShowSkills() {
     setShowWork('hide-left');
     setShowSkills('show-right');
+    handleHideButtons();
   }
   function handleInputData(event) {
     setInputData({
@@ -72,6 +79,12 @@ export default function MainPage({ defaultCV }) {
   }
   function handleShowPreview() {
     setShowPreview(showPreview ? false : true);
+  }
+  function handleHideButtons() {
+    setHideButtons(true);
+    setTimeout(() => {
+      setHideButtons(false);
+    }, 500);
   }
   return (
     <>
@@ -109,8 +122,9 @@ export default function MainPage({ defaultCV }) {
           updateInputData={handleInputData}
           deleteSkillState={handleDeleteSkill}
         />
-        <DefaultCVButton showDefaultCV={showDefaultCV} />
+        <DefaultCVButton hide={hideButtons} showDefaultCV={showDefaultCV} />
         <PreviewButton
+          hide={hideButtons}
           showPreview={showPreview}
           handleShowPreview={handleShowPreview}
         />
