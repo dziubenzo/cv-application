@@ -122,13 +122,6 @@ Mobile
     right: 12px !important;
   }
 
-  button[class='default-cv-button']:hover,
-  button[class='preview-button']:hover {
-    background-color: var(--main-colour);
-    color: var(--bg-colour);
-    outline: 3px solid var(--bg-colour);
-  }
-
   .navigation-buttons {
     gap: 0px;
   }
@@ -188,5 +181,31 @@ Tablet
     transform: initial;
     right: 16px;
     bottom: 16px;
+  }
+}
+
+/* 
+Hover effects
+*/
+
+@media (hover: hover) {
+  button[class='extra-work-info-button']:hover,
+  button[class='extra-education-info-button']:hover,
+  button[class='add-skill-button']:hover,
+  button[class='delete-skill-button']:hover {
+    background-color: var(--main-colour);
+    color: var(--bg-colour);
+    outline: 3px solid var(--bg-colour);
+  }
+
+  button[class='default-cv-button']:hover,
+  button[class='preview-button']:hover {
+    background-color: var(--main-colour);
+    color: var(--bg-colour);
+    outline: 3px solid var(--bg-colour);
+  }
+
+  .creator-details img:hover {
+    transform: scale(1.3) rotate(360deg);
   }
 }

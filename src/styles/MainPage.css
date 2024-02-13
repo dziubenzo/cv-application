@@ -122,15 +122,6 @@ button[class='add-skill-button'] {
   margin: 0;
 }
 
-button[class='extra-work-info-button']:hover,
-button[class='extra-education-info-button']:hover,
-button[class='add-skill-button']:hover,
-button[class='delete-skill-button']:hover {
-  background-color: var(--main-colour);
-  color: var(--bg-colour);
-  outline: 3px solid var(--bg-colour);
-}
-
 button[class='delete-skill-button'] {
   position: absolute;
   right: 4px;
@@ -181,13 +172,6 @@ button[class='default-cv-button'] {
 button[class='preview-button'] {
   right: -50px;
   transform: translateX(100%);
-}
-
-button[class='default-cv-button']:hover,
-button[class='preview-button']:hover {
-  background-color: var(--main-colour);
-  color: var(--bg-colour);
-  outline: 3px solid var(--bg-colour);
 }
 
 /* 
