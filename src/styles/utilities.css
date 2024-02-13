@@ -81,3 +81,8 @@ html {
     transform: scaleY(1);
   }
 }
+
+.show-preview {
+  visibility: visible;
+  transform: scale(1);
+}

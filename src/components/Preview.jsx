@@ -2,10 +2,7 @@ import PreviewButton from './PreviewButton';
 
 export default function Preview({ handleShowPreview, showPreview, data }) {
   return (
-    <div
-      className="preview"
-      style={showPreview ? { display: 'grid' } : { display: 'none' }}
-    >
+    <div className={showPreview ? 'preview show-preview' : 'preview'}>
       <div className="top">
         <h1 className="name">
           {data.firstName} {data.lastName}

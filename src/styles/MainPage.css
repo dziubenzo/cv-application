@@ -200,15 +200,17 @@ Preview
 }
 
 .preview {
+  display: grid;
+  transform: scale(0);
   position: absolute;
   transform-origin: center;
-  display: grid;
   grid-template-columns: 4fr 1fr;
   grid-template-rows: 1fr 5fr;
   background-color: white;
   height: 90svh;
   aspect-ratio: 3 / 4;
   padding: 4em;
+  transition: all 0.4s;
 }
 
 .preview .top {
