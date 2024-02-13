@@ -1,5 +1,3 @@
-import '../styles/HeaderFooter.css';
-
 export default function CreatorDetails() {
   return (
     <div className="creator-details">

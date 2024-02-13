@@ -1,7 +1,6 @@
 import BasicInfo from './BasicInfo';
 import EducationInfo from './EducationInfo';
 import { useState } from 'react';
-import '../styles/MainPage.css';
 import WorkInfo from './WorkInfo';
 import SkillsInfo from './SkillsInfo';
 import DefaultCVButton from './DefaultCVButton';

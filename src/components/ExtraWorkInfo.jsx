@@ -1,5 +1,3 @@
-import '../styles/MainPage.css';
-
 export default function ExtraWorkInfo({
   defaultCV,
   counter,

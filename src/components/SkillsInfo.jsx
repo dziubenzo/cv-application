@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import '../styles/MainPage.css';
 import Skill from './Skill';
 
 export default function SkillsInfo({

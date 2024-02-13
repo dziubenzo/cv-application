@@ -1,4 +1,3 @@
-import '../styles/MainPage.css';
 import { useState } from 'react';
 import ExtraEducationInfo from './ExtraEducationInfo';
 
