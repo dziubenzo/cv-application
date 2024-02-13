@@ -14,7 +14,7 @@ export default function BasicInfo({
         type="text"
         id="first-name"
         name="firstName"
-        value={showInputData.firstName}
+        value={showInputData.firstName || ''}
         onChange={updateInputData}
         placeholder={defaultCV.firstName}
       />
@@ -23,7 +23,7 @@ export default function BasicInfo({
         type="text"
         id="last-name"
         name="lastName"
-        value={showInputData.lastName}
+        value={showInputData.lastName || ''}
         onChange={updateInputData}
         placeholder={defaultCV.lastName}
       />
@@ -32,7 +32,7 @@ export default function BasicInfo({
         type="text"
         id="city"
         name="city"
-        value={showInputData.city}
+        value={showInputData.city || ''}
         onChange={updateInputData}
         placeholder={defaultCV.city}
       />
@@ -41,7 +41,7 @@ export default function BasicInfo({
         type="text"
         id="country"
         name="country"
-        value={showInputData.country}
+        value={showInputData.country || ''}
         onChange={updateInputData}
         placeholder={defaultCV.country}
       />
@@ -50,7 +50,7 @@ export default function BasicInfo({
         type="email"
         id="email"
         name="email"
-        value={showInputData.email}
+        value={showInputData.email || ''}
         onChange={updateInputData}
         placeholder={defaultCV.email}
       />
@@ -59,7 +59,7 @@ export default function BasicInfo({
         type="number"
         id="phone"
         name="phone"
-        value={showInputData.phone}
+        value={showInputData.phone || ''}
         onChange={updateInputData}
         placeholder={defaultCV.phone}
       />

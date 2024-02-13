@@ -21,7 +21,7 @@ export default function ExtraWorkInfo({
         type="text"
         id={`company-extra${counter}`}
         name={`companyExtra${counter}`}
-        value={showInputData[`companyExtra${counter}`]}
+        value={showInputData[`companyExtra${counter}`] || ''}
         onChange={updateInputData}
         placeholder={defaultCV[`companyExtra${counter}`]}
       />
@@ -30,7 +30,7 @@ export default function ExtraWorkInfo({
         type="text"
         id={`position-extra${counter}`}
         name={`positionExtra${counter}`}
-        value={showInputData[`positionExtra${counter}`]}
+        value={showInputData[`positionExtra${counter}`] || ''}
         onChange={updateInputData}
         placeholder={defaultCV[`positionExtra${counter}`]}
       />
@@ -39,7 +39,7 @@ export default function ExtraWorkInfo({
         type="tel"
         id={`start-date-company-extra${counter}`}
         name={`startDateCompanyExtra${counter}`}
-        value={showInputData[`startDateCompanyExtra${counter}`]}
+        value={showInputData[`startDateCompanyExtra${counter}`] || ''}
         onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
         placeholder={defaultCV[`startDateCompanyExtra${counter}`]}
@@ -49,7 +49,7 @@ export default function ExtraWorkInfo({
         type="tel"
         id={`end-date-company-extra${counter}`}
         name={`endDateCompanyExtra${counter}`}
-        value={showInputData[`endDateCompanyExtra${counter}`]}
+        value={showInputData[`endDateCompanyExtra${counter}`] || ''}
         onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
         placeholder={defaultCV[`endDateCompanyExtra${counter}`]}

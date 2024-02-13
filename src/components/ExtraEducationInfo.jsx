@@ -21,7 +21,7 @@ export default function ExtraEducationInfo({
         type="text"
         id={`institution-extra${counter}`}
         name={`institutionExtra${counter}`}
-        value={showInputData[`institutionExtra${counter}`]}
+        value={showInputData[`institutionExtra${counter}`] || ''}
         onChange={updateInputData}
         placeholder={defaultCV[`institutionExtra${counter}`]}
       />
@@ -30,7 +30,7 @@ export default function ExtraEducationInfo({
         type="text"
         id={`programme-extra${counter}`}
         name={`programmeExtra${counter}`}
-        value={showInputData[`programmeExtra${counter}`]}
+        value={showInputData[`programmeExtra${counter}`] || ''}
         onChange={updateInputData}
         placeholder={defaultCV[`programmeExtra${counter}`]}
       />
@@ -39,7 +39,7 @@ export default function ExtraEducationInfo({
         type="tel"
         id={`start-date-extra${counter}`}
         name={`startDateExtra${counter}`}
-        value={showInputData[`startDateExtra${counter}`]}
+        value={showInputData[`startDateExtra${counter}`] || ''}
         onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
         placeholder={defaultCV[`startDateExtra${counter}`]}
@@ -49,7 +49,7 @@ export default function ExtraEducationInfo({
         type="tel"
         id={`end-date-extra${counter}`}
         name={`endDateExtra${counter}`}
-        value={showInputData[`endDateExtra${counter}`]}
+        value={showInputData[`endDateExtra${counter}`] || ''}
         onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
         placeholder={defaultCV[`endDateExtra${counter}`]}

@@ -14,7 +14,7 @@ export default function Skill({
           type="text"
           id={`skill${count}`}
           name={`skill${count}`}
-          value={showInputData[`skill${count}`]}
+          value={showInputData[`skill${count}`] || ''}
           onChange={updateInputData}
           placeholder={defaultCV[`skill${count}`]}
         />

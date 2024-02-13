@@ -28,7 +28,7 @@ export default function EducationInfo({
         type="text"
         id="institution"
         name="institution"
-        value={showInputData.institution}
+        value={showInputData.institution || ''}
         onChange={updateInputData}
         placeholder={defaultCV.institution}
       />
@@ -37,7 +37,7 @@ export default function EducationInfo({
         type="text"
         id="programme"
         name="programme"
-        value={showInputData.programme}
+        value={showInputData.programme || ''}
         onChange={updateInputData}
         placeholder={defaultCV.programme}
       />
@@ -46,7 +46,7 @@ export default function EducationInfo({
         type="tel"
         id="start-date"
         name="startDate"
-        value={showInputData.startDate}
+        value={showInputData.startDate || ''}
         onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
         placeholder={defaultCV.startDate}
@@ -56,7 +56,7 @@ export default function EducationInfo({
         type="tel"
         id="end-date"
         name="endDate"
-        value={showInputData.endDate}
+        value={showInputData.endDate || ''}
         onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
         placeholder={defaultCV.endDate}

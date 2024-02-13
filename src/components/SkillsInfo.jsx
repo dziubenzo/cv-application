@@ -53,7 +53,7 @@ export default function SkillsInfo({
         id="profile"
         name="profile"
         rows={10}
-        value={showInputData.profile}
+        value={showInputData.profile || ''}
         onChange={updateInputData}
         placeholder={defaultCV.profile}
       />

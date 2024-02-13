@@ -31,7 +31,7 @@ export default function WorkInfo({
         type="text"
         id="company"
         name="company"
-        value={showInputData.company}
+        value={showInputData.company || ''}
         onChange={updateInputData}
         placeholder={defaultCV.company}
       />
@@ -40,7 +40,7 @@ export default function WorkInfo({
         type="text"
         id="position"
         name="position"
-        value={showInputData.position}
+        value={showInputData.position || ''}
         onChange={updateInputData}
         placeholder={defaultCV.position}
       />
@@ -49,7 +49,7 @@ export default function WorkInfo({
         type="tel"
         id="start-date-company"
         name="startDateCompany"
-        value={showInputData.startDateCompany}
+        value={showInputData.startDateCompany || ''}
         onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
         placeholder={defaultCV.startDateCompany}
@@ -59,7 +59,7 @@ export default function WorkInfo({
         type="tel"
         id="end-date-company"
         name="endDateCompany"
-        value={showInputData.endDateCompany}
+        value={showInputData.endDateCompany || ''}
         onChange={updateInputData}
         pattern="(0[1-9]|1[0-2])/(1\d{3}|2\d{3})"
         placeholder={defaultCV.endDateCompany}
